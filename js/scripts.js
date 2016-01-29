@@ -6,24 +6,10 @@ function Order (pizzaSize,toppingMeat,toppingVeggie,toppingSauce,crustStyle) {
   this.crustStyle = crustStyle;
   this.cost = 0;
 }
-
-Order.prototype.costCalculate = function () {
-	if (this.pizzaSize === "Small") {
-		cost += 3;
-  }
-	else if (this.pizzaSize === "Medium") {
-		cost += 6;
-  }
-	else if (this.pizzaSize === "Large") {
-		cost += 9;
-  }
-  else if (this.pizzaSize === "xl") {
-    cost += 12;
-  }
-  var cost = this.cost
-  return cost;
-}
-
+// 
+// Order.prototype.costCalculate = function () {
+//
+//
 
 
 

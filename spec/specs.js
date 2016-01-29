@@ -7,10 +7,9 @@ describe('Order', function(){
     expect(testOrder.toppingSauce).to.equal("red");
     expect(testOrder.crustStyle).to.equal("pan");
   });
-  it("adds a monetary value to an Order", function(){
+  it("adds the cost calculator method", function(){
     var testOrder = new Order("small","pepperoni","onions", "red","pan");
-    testOrder.costCalculate()
-    expect(testOrder.cost).to.equal(8);
+    expect(testOrder.costCalculate).to.equal(8);
   });
 });
 //
