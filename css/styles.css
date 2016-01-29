@@ -2,11 +2,59 @@
   display: none;
 }
 
-.contact {
-  cursor: pointer;
-  color: #0088cc;
+body {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg");
+  background-size:auto;
+    background-position:bottom;
 }
 
-.contact:hover {
-  text-decoration: underline;
+h1 {
+  text-align: center;
+  font-family: Papyrus, fantasy;
+	font-size: 35px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight: 600;
+	line-height: 50px;
+  background-color:white;
+  color: #D8F6CE;
+  background-image: url("http://holidaysto-italy.co.uk/wp-content/uploads/2011/02/cropped-italy-header.jpg");
+  opacity:80;
+  letter-spacing: 20px;
+  padding-top: 10px;
+  }
+
+p {
+  color: #ED6300;
+  font-size: 18px;
+  text-align: center;
+  align-self: center;
+  border-style: groove;
+  border-color: #D8F6CE;
+  border-radius: 20%;
+  border-left: 80%;
+  border-right: 10px;
+  background-color: white;
+  width: 100%;
+}
+
+button {
+  color: #ED6300;
+  background-color: white;
+  font-size:30px;
+}
+
+form {
+  font-size: 18px;
+}
+
+.resultdisplay2 {
+  font-size: 22px;
+  background-color: white;
+  width:112px;
+}
+
+.resultdisplay {
+  color: #AF4311;
+  font-size: 20px;
 }

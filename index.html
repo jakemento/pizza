@@ -8,11 +8,20 @@
     <title>Pizza Picker</title>
   </head>
   <body>
+    <br>
     <h1> Jacobo's Pizzaria </h1>
-    <p> Pick a size, some toppings and a sauce and crust type, we'll give you an estimate for your pizza price on pickup </p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p> Pick a size, some toppings, a sauce and a crust type, we'll give you an estimate for your pizza price on pickup </p>
+    <br>
+    <br>
     <div>
       <form id="newOrder">
-        <label for="size">Which of these sizes would you like?</label>
+        <label for="size">Which of these sizes <br>would you like?</label>
         <select id="size">
           <option value="small">small</option>
           <option value="medium">medium</option>
@@ -26,20 +35,21 @@
           <option value="chicken">chicken</option>
         </select>
         <br>
-        <label for="veggie">Pick a Veggie!</label>
+        <label for="veggie">Pick a Veggie</label>
         <select id="veggie">
           <option value="onions">onions</option>
           <option value="mushrooms">mushrooms</option>
           <option value="olives">olives</option>
         </select>
         <br>
-        <label for="sauce">Pick a sauce!</label>
+        <label for="sauce">Pick a sauce</label>
         <select id="sauce">
           <option value="red">red</option>
           <option value="white">white</option>
           <option value="garlic">garlic</option>
         </select>
         <br>
+        <label for="crust">Pick a crust type</label>
         <select id="crust">
           <option value="pan">pan</option>
           <option value="skinny">skinny</option>
@@ -49,10 +59,12 @@
         <button type="submit" class="btn">Click to calculate your pizza cost</button>
         </form>
       </div>
-      <div>
-          <h2>Pizza Cost:</h2>
-          <ul id="show-order">
-          </ul>
+      <div class = "resultdisplay">
+          <h2>Pizza Cost (in dollars):</h2>
+          <div class = "resultdisplay2">
+            <ul id="show-order">
+            </ul>
+          </div>
       </div>
   </body>
 </html>

@@ -44,7 +44,7 @@ Order.prototype.costCalculate = function () {
       this.cost += 3;
     }
     return this.cost;
-  }
+}
 
 
 $(document).ready(function () {
