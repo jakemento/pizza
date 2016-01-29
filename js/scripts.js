@@ -47,10 +47,12 @@ Order.prototype.costCalculate = function () {
   }
 
 
-$(document).ready(function() {
+$(document).ready(function () {
 
   $("form#newOrder").submit(function(event) {
     event.preventDefault();
+
+    $("#show-order").toggle();
 
     var size = $("select#size").val();
     var meat = $("select#meat").val();
@@ -58,25 +60,9 @@ $(document).ready(function() {
     var sauce = $("select#sauce").val();
     var crust = $("select#crust").val();
 
+    newOrder = new Order(size,meat,veggie,sauce,crust);
+    newOrder.costCalculate();
 
-    $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
-
-    $("input#new-first-name").val("");
-    $("input#new-last-name").val("");
-
-    $(".contact").last().click(function(){
-      $("#show-contact").toggle();
-      $("#show-contact h2").text(newContact.fullName());
-      $(".first-name").text(newContact.firstName);
-      $(".last-name").text(newContact.lastName);
-
-
-   $("input#size").val("");
-   $("input#meat").val("");
-   $("input#veggie").val("");
-   $("input#sauce").val("");
-   $("input#crust").val("");
-
- });
-});
+    $("ul#show-order").text(newOrder.cost);
+  });
 });
