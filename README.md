@@ -6,6 +6,6 @@ This is a website I created for my fourth code review. Its main function is to, 
 ##Program Setup Instructions
 navigate to the site, select the type of pizza you want to order, hit enter, and you will see the pizza price.
 ###Link
-http://jakemento.github.io/
+http://jakemento.github.io/pizza
 ##Legal
 Copyright(c) 2015 Jacob Steinberg
