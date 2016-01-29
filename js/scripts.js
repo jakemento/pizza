@@ -15,6 +15,34 @@ Order.prototype.costCalculate = function () {
     } else if (this.pizzaSize === "large") {
       this.cost += 9;
     }
+  if (this.toppingMeat === "pepperoni") {
+      this.cost += 1;
+    } else if (this.toppingMeat === "bacon") {
+      this.cost += 2;
+    } else if (this.pizzaSize === "chicken") {
+      this.cost += 3;
+    }
+  if (this.toppingVeggie === "onions") {
+      this.cost += 1;
+    } else if (this.toppingVeggie === "olives") {
+      this.cost += 1;
+    } else if (this.toppingVeggie === "mushrooms") {
+      this.cost += 2;
+    }
+  if (this.toppingSauce === "red") {
+      this.cost += 1;
+    } else if (this.toppingSauce === "white") {
+      this.cost += 2;
+    } else if (this.toppingSauce === "garlic") {
+      this.cost += 2;
+    }
+  if (this.crustStyle === "skinny") {
+      this.cost += 1;
+    } else if (this.crustStyle === "original") {
+      this.cost += 2;
+    } else if (this.crustStyle === "pan") {
+      this.cost += 3;
+    }
     return this.cost;
   }
 
