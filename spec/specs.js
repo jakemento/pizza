@@ -8,8 +8,8 @@ describe('Order', function(){
     expect(testOrder.crustStyle).to.equal("pan");
   });
   it("adds the cost calculator method", function(){
-    var testOrder = new Order("small","pepperoni","onions", "red","pan");
-    expect(testOrder.costCalculate).to.equal(8);
+    var testOrder = new Order("small");
+    expect(testOrder.costCalculate()).to.equal(3);
   });
 });
 //

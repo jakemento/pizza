@@ -6,90 +6,49 @@ function Order (pizzaSize,toppingMeat,toppingVeggie,toppingSauce,crustStyle) {
   this.crustStyle = crustStyle;
   this.cost = 0;
 }
-// 
-// Order.prototype.costCalculate = function () {
-//
-//
+
+Order.prototype.costCalculate = function () {
+  if (this.pizzaSize === "small") {
+      this.cost += 3;
+    } else if (this.pizzaSize === "medium") {
+      this.cost += 6;
+    } else if (this.pizzaSize === "large") {
+      this.cost += 9;
+    }
+    return this.cost;
+  }
 
 
+$(document).ready(function() {
+
+  $("form#newOrder").submit(function(event) {
+    event.preventDefault();
+
+    var size = $("select#size").val();
+    var meat = $("select#meat").val();
+    var veggie = $("select#veggie").val();
+    var sauce = $("select#sauce").val();
+    var crust = $("select#crust").val();
 
 
-//  function Contact (firstName,lastName) {
-//    this.firstName = firstName;
-//    this.lastName = lastName;
-//    this.addresses = [];
-//  }
-//
-//  Contact.prototype.fullName = function () {
-//    return this.firstName + " " + this.lastName;
-//  }
-//   function Address (street, city, state) {
-//     this.street = street;
-//     this.city = city;
-//     this.state = state;
-//   }
-//
-//   Address.prototype.fullAddress = function () {
-//     return this.street + ", " + this.city + ", " + this.state;
-//   }
-//
-// $(document).ready(function() {
-//
-//   $("#add-address").click(function() {
-//     $("#new-addresses").append('<div class="new-address">' +
-//                              '<div class="form-group">' +
-//                                '<label for="new-street">Street</label>' +
-//                                '<input type="text" class="form-control new-street">' +
-//                              '</div>' +
-//                              '<div class="form-group">' +
-//                                '<label for="new-city">City</label>' +
-//                                '<input type="text" class="form-control new-city">' +
-//                              '</div>' +
-//                              '<div class="form-group">' +
-//                                '<label for="new-state">State</label>' +
-//                                '<input type="text" class="form-control new-state">' +
-//                              '</div>' +
-//                            '</div>');
-// });
-//
-//   $("form#new-contact").submit(function(event) {
-//     event.preventDefault();
-//
-//     var inputtedFirstName = $("input#new-first-name").val();
-//     var inputtedLastName = $("input#new-last-name").val();
-//     var newContact = new Contact(inputtedFirstName, inputtedLastName);
-//
-//     $(".new-address").each(function() {
-//       var inputtedStreet = $(this).find("input.new-street").val();
-//       var inputtedCity = $(this).find("input.new-city").val();
-//       var inputtedState = $(this).find("input.new-state").val();
-//       var newAddress = new Address(inputtedStreet, inputtedCity, inputtedState)
-//       newContact.addresses.push(newAddress)
-//      });
-//
-//     $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
-//
-//     $("input#new-first-name").val("");
-//     $("input#new-last-name").val("");
-//
-//     $(".contact").last().click(function(){
-//       $("#show-contact").toggle();
-//       $("#show-contact h2").text(newContact.fullName());
-//       $(".first-name").text(newContact.firstName);
-//       $(".last-name").text(newContact.lastName);
-//
-//       $("ul#addresses").text("");
-//      newContact.addresses.forEach(function(address) {
-//        console.log("here")
-//        $("ul#addresses").append("<li>" + address.fullAddress() + "</li>");
-//      });
-//    });
-//
-//    $("input#new-first-name").val("");
-//    $("input#new-last-name").val("");
-//    $("input.new-street").val("");
-//    $("input.new-city").val("");
-//    $("input.new-state").val("");
-//
-//  });
-// });
+    $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
+
+    $("input#new-first-name").val("");
+    $("input#new-last-name").val("");
+
+    $(".contact").last().click(function(){
+      $("#show-contact").toggle();
+      $("#show-contact h2").text(newContact.fullName());
+      $(".first-name").text(newContact.firstName);
+      $(".last-name").text(newContact.lastName);
+
+
+   $("input#size").val("");
+   $("input#meat").val("");
+   $("input#veggie").val("");
+   $("input#sauce").val("");
+   $("input#crust").val("");
+
+ });
+});
+});
