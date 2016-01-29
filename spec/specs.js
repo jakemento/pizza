@@ -1,12 +1,12 @@
-describe('Ticket', function(){
-  it("creates a ticket price, based on the 3 inputs");
-  var testTicket = new Ticket("Dredd","noon",18);
-  expect(testTicket.movieName).to.equal("Dredd");
-  expect(testTicket.movieTime).to.equal("noon");
-  expect(testTicket.movieAge).to.equal(18);
+describe('Order', function(){
+  it("creates a new Order with the given properties", function(){
+    var testOrder = new Order("jake","small",["pepperoni", "olives"],"pan");
+    expect(testOrder.firstName).to.equal("jake");
+    expect(testOrder.pizzaSize).to.equal("small");
+    expect(testOrder.toppings).to.eql(["pepperoni", "olives"]);
+    expect(testOrder.crustStyle).to.equal("pan");
+  });
 });
-
-
 //
 //
 //
