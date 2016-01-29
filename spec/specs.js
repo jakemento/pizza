@@ -1,10 +1,16 @@
 describe('Order', function(){
   it("creates a new Order with the given properties", function(){
-    var testOrder = new Order("jake","small",["pepperoni", "olives"],"pan");
-    expect(testOrder.firstName).to.equal("jake");
+    var testOrder = new Order("small","pepperoni","onions", "red","pan");
     expect(testOrder.pizzaSize).to.equal("small");
-    expect(testOrder.toppings).to.eql(["pepperoni", "olives"]);
+    expect(testOrder.toppingMeat).to.equal("pepperoni");
+    expect(testOrder.toppingVeggie).to.equal("onions");
+    expect(testOrder.toppingSauce).to.equal("red");
     expect(testOrder.crustStyle).to.equal("pan");
+  });
+  it("adds a monetary value to an Order", function(){
+    var testOrder = new Order("small","pepperoni","onions", "red","pan");
+    testOrder.costCalculate()
+    expect(testOrder.cost).to.equal(8);
   });
 });
 //

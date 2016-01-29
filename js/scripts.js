@@ -1,9 +1,29 @@
-function Order (firstName,pizzaSize,toppings,crustStyle) {
-  this.firstName = firstName;
+function Order (pizzaSize,toppingMeat,toppingVeggie,toppingSauce,crustStyle) {
   this.pizzaSize = pizzaSize;
-  this.toppings = toppings;
+  this.toppingMeat = toppingMeat;
+  this.toppingVeggie = toppingVeggie;
+  this.toppingSauce = toppingSauce;
   this.crustStyle = crustStyle;
+  this.cost = 0;
 }
+
+Order.prototype.costCalculate = function () {
+	if (this.pizzaSize === "Small") {
+		cost += 3;
+  }
+	else if (this.pizzaSize === "Medium") {
+		cost += 6;
+  }
+	else if (this.pizzaSize === "Large") {
+		cost += 9;
+  }
+  else if (this.pizzaSize === "xl") {
+    cost += 12;
+  }
+  var cost = this.cost
+  return cost;
+}
+
 
 
 
